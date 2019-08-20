@@ -90,6 +90,22 @@ blockquote {
     margin: auto;
 }
 
+.swag-btn {
+    padding: 1em 1.66em;
+    background-color: #90d23d;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: .7em;
+    transition: background-color .2s linear;
+}
+
+.swag-btn:hover:not(.view-more) {
+    background-color: #fff;
+    color: #90d23d;
+    border-color: #90d23d;
+}
+
 header {
     margin-top: 45px;
 }
@@ -128,13 +144,30 @@ header .wrap {
     text-transform: uppercase;
 }
 
-.nav ul li  {
- color: #ffffff;
- font: 100 15px/1 'Roboto', sans-serif;
+.list-item {
+    color: #ffffff;
+    font: 100 15px/1 'Roboto', sans-serif;
+    position: relative;
 }
 
 .nav ul li + li {
     margin-left: 45px;
+}
+
+.list-item:after {
+    content: "";
+    width: 0;
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width .2s linear;
+}
+
+.list-item:hover:after {
+    width: 100%;
 }
 
 .clock {
@@ -167,25 +200,25 @@ header .wrap {
 
 .welcome-guys .guy-2 {
     z-index: 5;
-    left: 190px;
+    left: 80px;
     top: 50px;
 }
 
 .welcome-guys .guy-3 {
     z-index: 4;
-    left: 145px;
+    left: 55px;
     top: 40px;
 }
 
 .welcome-guys .guy-4 {
     z-index: 3;
-    left: 100px;
+    left: 12px;
     top: 35px;  
 }
 
 .welcome-guys .guy-5 {
     z-index: 2;
-    left: 60px;
+    left: -41px;
     top: 30px;
 }
 
@@ -197,7 +230,7 @@ header .wrap {
 .welcome-guys .guy-1 img {
     position: absolute;
     top: 63px;
-    left: 60px;
+    left: -50px;
 }
 
 .welcome-card {
@@ -230,6 +263,7 @@ header .wrap {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 22px;
+    border: 2px solid #90d23d;
 }
 
 .welcome-form .control:focus {
@@ -318,15 +352,6 @@ table .first td:nth-child(3) {
 
 }
 
-.swag-btn {
-    padding: 1em 1.66em;
-    background-color: #90d23d;
-    color: white;
-    font-weight: 400;
-    font-size: 18px;
-    border-radius: .7em;
-}
-
 .elite-logo {
     position: absolute;
     left: 0;
@@ -344,33 +369,52 @@ table .first td:nth-child(3) {
     transform: skewY(4deg);
 }
 
-.speakers .speakers-list {
+/* .speakers .speakers-list {
   margin-top: 70px;
 }
 
 .speakers .speakers-list .row {
     margin-top: 40px;
-}
+} */
 
-.speakers .speakers-list .row:nth-child(2) .col:nth-child(2) img {
+/* .speakers-list-item {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .75);
+} */
+
+/* .speakers .speakers-list .row:nth-child(2) .col:nth-child(2) img {
     width: 93%;
+} */
+
+.speakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 -15px;
 }
 
-.speakers .speakers-list .img {
-    background: url('/img/speaker-2.png') no-repeat;
+.speakers-list-item {
+    width: 33.33333%;
+    padding: 15px 15px;
+}
+
+.speakers-list-item img {
     width: 100%;
-    height: 100%;
+    display: block;
+}
+
+.speakers .speakers-list .covered {
+    background: url('/img/speaker-2.png') no-repeat;
+    background-size: cover;
     padding: 30px 30px;
 }
 
-.speakers .speakers-list .img .name {
+.speakers .speakers-list-item .covered .name {
     font-size: 45px;
     color: white;
-    font-weight: 900;
+    font-weight: 900;   
     line-height: 43px;
 }
 
-hr {
+.line {
     margin: 10px 0 15px 0;
     height: 4px;
     background-color: white;
@@ -378,18 +422,18 @@ hr {
 }
 
 
-.speakers .speakers-list .img .more {
+.speakers .speakers-list-item .covered .more {
     color: white;
     font-weight: 500;
     font-size: 18px;
 }
 
-.social-networks li {
+.social-networks-item {
     display: inline-block;
     margin-top: 55px; 
 }
 
-.social-networks li + li {
+.social-networks .social-networks-item + .social-networks-item {
     margin-left: 5px;
 }
 
@@ -414,7 +458,7 @@ hr {
     margin: 50px 0 80px 0;
 }
 
-.sponsors li + li {
+.sponsors .sponsors-item + .sponsors-item {
     margin-left: 85px;;
 }
 
@@ -468,8 +512,16 @@ hr {
     justify-content: center;
 }
 
-.footer-menu li+ li {
+.footer-menu .footer-menu-item + .footer-menu-item {
     margin-left: 15px;
+}
+
+.footer-menu-item {
+    transition: transform .2s linear;
+}
+
+.footer-menu-item:hover {
+    transform: translateY(-5px);
 }
 
 .footer-info {
@@ -492,26 +544,27 @@ hr {
 }
    
 .countdown {
-font-family: 'Roboto Slab', sans-serif;
-color: #fff;
-display: inline-block;
-font-weight: 100;
-text-align: center;
-font-size: 130px;
+    font-family: 'Roboto Slab', sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 130px;
 }
 
 .countdown-number {
-padding: 10px;
-display: inline-block;
+    padding: 10px;
+    display: inline-block;
 }
 
 .countdown-time {
-padding: 15px;
-display: inline-block;
+    padding: 15px;
+    display: inline-block;
 }
 
 .countdown-text {
-display: block;
-padding-top: 5px;
-font-size: 16px;
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+    
 }
