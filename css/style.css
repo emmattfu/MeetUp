@@ -452,6 +452,7 @@ table .first td:nth-child(3) {
 .speakers-list-item {
     width: 33.33333%;
     padding: 15px 15px;
+    position: relative;
 }
 
 .speakers-list-item img {
@@ -464,14 +465,28 @@ table .first td:nth-child(3) {
     position: relative;
 }
 
+/* .covered-content {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+    transition: opasity 2s linear;
+    background: url('../img/speaker-2.png') no-repeat;
+    background-size: cover;
+} */
+
 .covered-content {
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
+.covered-content:hover {
+    opacity: 100;
+}
 
-.speakers .speakers-list-item .covered .name {
+
+.covered-content .name {
     font-size: 45px;
     color: white;
     font-weight: 900;   
@@ -486,7 +501,7 @@ table .first td:nth-child(3) {
 }
 
 
-.speakers .speakers-list-item .covered .more {
+.covered-content .more {
     color: white;
     font-weight: 500;
     font-size: 18px;
@@ -673,6 +688,14 @@ table .first td:nth-child(3) {
     bottom: -8px;
 }
 
+.speaker {
+    position: relative;
+}
+
+.covered-content.hover {
+    position: absolute;
+}
+
 @media (max-width: 1199px) {
     .arrow-up {
         display: none;
@@ -748,6 +771,10 @@ table .first td:nth-child(3) {
 }
 
 @media (max-width: 767px) {
+
+    .countdown-number {
+        padding: 0;
+    }
     .countdown-time {
         font-size: 75px;
         line-height: 1;
@@ -813,6 +840,12 @@ table .first td:nth-child(3) {
         line-height: 1;
     }
 
+
+    .countdown-time {
+        padding: 0;
+        font-size: 30px;
+    }
+
     .stuff-list {
         flex-direction: column;
         margin-top: 105px;
@@ -861,7 +894,7 @@ table .first td:nth-child(3) {
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 521px) {
     .guy-4 {
         display: none; 
     }
@@ -870,6 +903,7 @@ table .first td:nth-child(3) {
         padding: 0;
         font-size: 30px;
     }
+
 
     .heading {
         font-size: 2.6em;
@@ -911,5 +945,41 @@ table .first td:nth-child(3) {
     .contacts-form {
         width: 100%;
         margin: auto;
+    }
+
+    .sponsors {
+        flex-direction: row;
+    }
+
+    .sponsors .sponsors-item + .sponsors-item {
+        margin-left: 85px;
+        margin-top: 0;
+}
+
+@media (max-width: 320px) {
+
+    .guy-3 {
+        display: none;
+    }
+
+    .sponsors {
+        flex-direction: column;
+    }
+
+    .sponsors .sponsors-item + .sponsors-item {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    table .first {
+        font-size: 18px;
+    }
+
+    table .second, .third, .fourth, .fifth {
+        font-size: 10px;
+    }
+
+    .footer-info {
+        font-size: 14px;
     }
 }
