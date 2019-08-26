@@ -17,126 +17,128 @@
 </head>
 
 <body>
-    <header id="header" class="grey-section">
+    <header id="header" class="header grey-section">
         <div class="container">
             <div class="wrap">
-                    <div class="logo">
-                            <img src="img/logo.png" alt="logo">
-                            <span class="logo-right">
-                                <img src="img/logo-text.png" alt="logo-text">
-                                <span class="logo-right-text">BANGLADESH</span>
-                            </span>
-                        </div>
+                <a class="logo" href="#">
+                    <img src="img/logo.png" alt="logo">
+                    <span class="logo-right">
+                        <img src="img/logo-text.png" alt="logo-text">
+                        <span class="logo-right-text">BANGLADESH</span>
+                    </span>
+                </a>
             
-                        <nav class="nav">
-                            <ul class="header-list">
-                                <li class="list-item"><a href="#welcome">Event details</a></li>
-                                <li class="list-item"><a href="#speakers">Speakers</a></li>
-                                <li class="list-item"><a href="#our-sponsors">Sponsors</a></li>
-                                <li class="list-item"><a href="#past-events">Past Events</a></li>
-                                <li class="list-item">Contacts</li>
-                            </ul>
-                        </nav>
-                    </div>
+                <nav class="nav" id="nav">
+                    <ul class="header-list">
+                        <li class="list-item"><a href="#welcome">Event details</a></li>
+                        <li class="list-item"><a href="#speakers">Speakers</a></li>
+                        <li class="list-item"><a href="#our-sponsors">Sponsors</a></li>
+                        <li class="list-item"><a href="#past-events">Past Events</a></li>
+                        <li class="list-item"> <a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+
+
+                <button class="burger" type="button" id="burger">
+                    <span class="burger-item"></span>
+                </button>
+                       
             </div>
+        </div>
             
     </header>
     <!-- Header end -->
 
     <main class="main grey-section" id="main">
-        <div class="clock text-center">
-            <div id="countdown" class="countdown">
-                <div class="countdown-number">
-                    <span class="days countdown-time"></span>
-                    <span class="countdown-text">Days</span>
-                </div>
-                <div class="countdown-number">
-                    <span class="hours countdown-time"></span>
-                    <span class="countdown-text">Hours</span>
-                </div>
-                <div class="countdown-number">
-                    <span class="minutes countdown-time"></span>
-                    <span class="countdown-text">Minutes</span>
-                </div>
-                <div class="countdown-number">
-                    <span class="seconds countdown-time"></span>
-                    <span class="countdown-text">Seconds</span>
+        <div class="container">
+            <div class="clock text-center" id="clock">
+                <div id="countdown" class="countdown">
+                    <div class="countdown-number">
+                        <span class="days countdown-time"></span>
+                        <span class="countdown-text">Days</span>
+                    </div>
+                    <div class="countdown-number">
+                        <span class="hours countdown-time"></span>
+                        <span class="countdown-text">Hours</span>
+                    </div>
+                    <div class="countdown-number">
+                        <span class="minutes countdown-time"></span>
+                        <span class="countdown-text">Minutes</span>
+                    </div>
+                    <div class="countdown-number">
+                        <span class="seconds countdown-time"></span>
+                        <span class="countdown-text">Seconds</span>
+                    </div>
                 </div>
             </div>
+            <!-- Clock end -->
         </div>
-        <!-- Clock end -->
+        
 
         <div class="welcome-guys">
             <div class="container">
                 <div class="guy-1">
-                    <img src="img/welcome-1.png" alt="">
+                    <img class="guys-photo" src="img/welcome-1.png" alt="">
                 </div>
                 <div class="guy-2">
-                    <img src="img/welcome-2.png" alt="">
+                    <img class="guys-photo" src="img/welcome-2.png" alt="">
                 </div>
                 <div class="guy-3">
-                    <img src="img/welcome-3.png" alt="">
+                    <img class="guys-photo" src="img/welcome-3.png" alt="">
                 </div>
                 <div class="guy-4">
-                    <img src="img/welcome-4.png" alt="">
+                    <img class="guys-photo" src="img/welcome-4.png" alt="">
                 </div>
                 <div class="guy-5">
-                    <img src="img/welcome-5.png" alt="">
+                    <img class="guys-photo" src="img/welcome-5.png" alt="">
                 </div>
             </div>
         </div>
         <!-- Welcome guys end -->
         <div class="welcome white-container" id="welcome">
             <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="greating">
-                            <span class="heading">Welcome!</span>
-                            <p class="text wc-text color-black">The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it too...<br><br>
-                            Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!<br><br>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;)<br>Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our <strong>invite</strong> page here too!</p>
-                        </div>
+                <div class="welcome-inner">
+                    <div class="greating">
+                        <span class="heading">Welcome!</span>
+                        <p class="text wc-text color-black">The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it too...<br><br>
+                        Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!<br><br>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;)<br>Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our <strong>invite</strong> page here too!</p>
                     </div>
-    
-                    <div class="col-5">
-                        <div class="card welcome-card">
-                            <div class="card-body text-center">
-                                <span class="welcome-card-text">Sign up for our event</span>
-                                
-                                <form class="welcome-form">
-                                    <input type="text" class="control" name="name" id="name" placeholder="Name">
-                                    <input type="text" class="control" name="email" id="email" placeholder="Enter your email">
-                                    <input type="text" class="control" name="phone" id="phone" placeholder="Phone number">
-                                    <input type="text" class="control" name="envado-name" id="envado-name" placeholder="Envado name">
-    
-                                    <button type="submit" class="submit-btn swag-btn w-100">Let me in!</button>
-                                </form>
-    
-                                <p class="welcome-text">Hurry up, Limited seats availble<br>
-                                    *we will never spam your email</p>
-                            </div>
-                        </div>
+
+                    <div class="welcome-card">
+                            <span class="welcome-card-text text-center">Sign up for our event</span>
+                            
+                            <form class="welcome-form">
+                                <input type="text" class="control" name="name" id="name" placeholder="Name">
+                                <input type="text" class="control" name="email" id="email" placeholder="Enter your email">
+                                <input type="text" class="control" name="phone" id="phone" placeholder="Phone number">
+                                <input type="text" class="control" name="envado-name" id="envado-name" placeholder="Envado name">
+
+                                <button type="submit" class="submit-btn swag-btn w-100">Let me in!</button>
+                            </form>
+
+                            <p class="welcome-text">Hurry up, Limited seats availble<br>
+                                *we will never spam your email</p>
                     </div>
                 </div>
-                <!-- Card end -->
-    
+
                 <div class="stuff">
                     <ul class="stuff-list">
                         <li>
                             <p><img src="img/stuff-1.png" alt="Community"></p>
                             
                             <span>Community</span>
-                            <p>Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging each other with interesting coversation and topics. We will have loads of fun.
+                            <p class="stuff-text">Meet the Community you’ve always talked with, in real life! This meetup will be all about authors engaging each other with interesting coversation and topics. We will have loads of fun.
                             </p>
                         </li>
                         <li>
                             <p><img src="img/stuff-2.png" alt="Talk Shop"></p>
                             <span>Talk Shop</span>
-                            <p>In this meetup you will get to know the marketplaces better, because that’s why were all here for right? Learn a few tips and tricks from experienced authors from all over the country.</p>
+                            <p class="stuff-text">In this meetup you will get to know the marketplaces better, because that’s why were all here for right? Learn a few tips and tricks from experienced authors from all over the country.</p>
                         </li>
                         <li>
                             <p> <img src="img/stuff-3.png" alt="War Stories"></p>
                             <span>War Stories</span>
-                            <p>Gather round fellow authors!<br>Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.
+                            <p class="stuff-text">Gather round fellow authors!<br>Hear the stories of success from your favorite authors and learn how they we able to tackle their problems and become successful.
                             </p>
                         </li>
                     </ul>
@@ -193,23 +195,24 @@
         
         <div class="speakers white-container" id="speakers">
             <div class="container">
-                <div class="row">
-                    <div class="col-7">
-                        <span class="heading">Speakers</span>
-                        <p class="speakers-text wc-text">Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects regarding being a digital product author, working at envato and marketing your business.<br>Hope you will have a great time listening to our presentations!</p>  
-                    </div>
+                <div class="speakers-intro">
+                    <span class="heading">Speakers</span>
+                    <p class="speakers-text wc-text">Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects regarding being a digital product author, working at envato and marketing your business.<br>Hope you will have a great time listening to our presentations!</p>  
                 </div>
+                
+                <div class="speakers-list">
+                    <div class="speakers-list-item">
+                        <a href=""><img src="img/speaker-1.png" alt="speaker-1"></a>
+                    </div>
 
-                <!-- <div class="speakers-list">
-                    <div class="row">
-                        <div class="col">
-                            <div class="speakers-list-item">
-                                <a href=""><img src="img/speaker-1.png" alt="speaker-1"></a>
+                    <div class="speakers-list-item">
+                        <div class="covered">
+                            <div class="covered-img">
+                                <img src="img/speaker-2.png" alt="">
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="img">
-                                <a class="speakers-list-item" href=""><span class="name">Shahriyer<br> Shuvo</span></a>
+                            
+                            <div class="covered-content">
+                                <span class="name">Shahriyer<br> Shuvo</span>
                                 <hr class="line">
                                 <span class="more">More about selling in the<br> Envato Marketplaces</span>
                                 <div class="social-networks">
@@ -218,58 +221,12 @@
                                     <a class="social-networks-item" href=""><img src="img/Be.png" alt="Be"></a>
                                     <a class="social-networks-item" href=""><img src="img/planet.png" alt="planet"></a>
                                 </div>
-                                Social networks end -->
-                            <!-- </div>
+                                <!-- Social networks end -->
+                            </div>
+                            <!-- Covered content end -->
                         </div>
-                        <div class="col">
-                            <a class="speakers-list-item" href=""><img src="img/speaker-1.png" alt="speaker-3"></a>
-                        </div>
+                        <!-- Covered end -->
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-1.png" alt="speaker-4"></a>
-                        </div>
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-5.png" alt=""></a>
-                        </div>
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-1.png" alt="speaker-5"></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-1.png" alt="speaker-6"></a>
-                        </div>
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-1.png" alt="speaker-7"></a>
-                        </div>
-                        <div class="col">
-                            <a class="speakers-list-item" href="#"><img src="img/speaker-1.png" alt="speaker-8"></a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Speakers list end -->
-
-                <div class="speakers-list">
-                    <div class="speakers-list-item">
-                        <a href=""><img src="img/speaker-1.png" alt="speaker-1"></a>
-                    </div>
-
-                    <div class="speakers-list-item">
-                        <div class="covered">
-                            <span class="name">Shahriyer<br> Shuvo</span>
-                            <hr class="line">
-                            <span class="more">More about selling in the<br> Envato Marketplaces</span>
-                            <div class="social-networks">
-                                <a class="social-networks-item" href="http://www.facebook.com" target="_blank"><img src="img/facebook.png" alt=""></a>
-                                <a class="social-networks-item" href="http://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
-                                <a class="social-networks-item" href=""><img src="img/Be.png" alt="Be"></a>
-                                <a class="social-networks-item" href=""><img src="img/planet.png" alt="planet"></a>
-                            </div> 
-                            <!-- Social networks end -->
-                        </div>
-                    </div>
-
                     
                     <a class="speakers-list-item" href=""><img src="img/speaker-1.png" alt="speaker-3"></a>
                     <a class="speakers-list-item" href=""><img src="img/speaker-1.png" alt="speaker-4"></a>
@@ -302,11 +259,11 @@
             
         <div class="past-events white-container" id="past-events">
             <div class="container">
-                <div class="row">
-                    <div class="col-7">
-                        <span class="heading">Past Events</span>
-                        <p class="past-events-text wc-text">Check out the photos of our previous events where we rocked with a lot of Famous and enthusiatic authors! We’re always planning to make our future events feel fresh and fun to be at. :)</p>
-                    </div>
+                <div class="past-events-intro">
+                    
+                    <span class="heading">Past Events</span>
+                    <p class="past-events-text wc-text">Check out the photos of our previous events where we rocked with a lot of Famous and enthusiatic authors! We’re always planning to make our future events feel fresh and fun to be at. :)</p>
+                    
                 </div>
                 
                 <div class="past-events-photo d-flex flex-wrap">
@@ -320,6 +277,24 @@
             </div>
         </div>
         <!-- Past events end -->
+
+        <!-- Contacts -->
+        <div class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts-inner text-center">
+                    
+                    <span class="heading contacts-heading">Have any questions?</span>
+                    <form class="contacts-form">
+                        <input type="email" class="control" name="contacts-email" id="contacts-email" placeholder="ingeniousartist@gmail.com">
+                        <textarea class="control" name="contacts-message" id="contacts-message" cols="30" rows="10" placeholder="Type your message"></textarea>
+                    
+                        <button type="submit" class="submit-btn swag-btn w-100 сontacts-btn">Send Message</button>
+                    </form>
+                
+                </div>
+            </div>
+        </div>
+        <!-- Contacts end -->
     </main>
     <!-- Main end -->
    
@@ -349,5 +324,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9373d84c54.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

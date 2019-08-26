@@ -88,6 +88,7 @@ blockquote {
 .container {
     max-width: 1040px;
     margin: auto;
+    padding: 0 15px;
 }
 
 .swag-btn {
@@ -106,13 +107,27 @@ blockquote {
     border-color: #90d23d;
 }
 
+
+/* ===== Header styles ===== */
 header {
     margin-top: 45px;
+    position: relative;
+    background-color: #4a454b;
 }
 
 header .wrap {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header.fixed {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    margin-top: 0;
+    padding: 10px 0;
 }
 
 .logo {
@@ -170,19 +185,52 @@ header .wrap {
     width: 100%;
 }
 
+/* ===== Header styles end ===== */
+
+/* ===== Clock styles ===== */
 .clock {
     height: 200px;
-    width: 970px;
+    width: 100%;
+    max-width: 970px;
     border: 2px solid #90d23d;
     border-radius: 8px;
-    margin: 120px auto 120px auto;
+    margin: 125px auto 120px auto;
 }
+
+.countdown {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 130px;
+}
+
+.countdown-number {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.countdown-time {
+    padding: 15px;
+    display: inline-block;
+}
+
+.countdown-text {
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+    
+}
+/* ===== Clock styles end ===== */
 
 .white-container {
     background-color: white;
     transform: skewY(-4deg);
 }
 
+
+/* ===== Welcome styles ===== */
 .welcome .container {
     transform: skewY(4deg);
 }
@@ -227,16 +275,28 @@ header .wrap {
     position: relative;
 }
 
+.greating {
+    width: 50%;
+    margin-right: 70px;
+}
+
 .welcome-guys .guy-1 img {
     position: absolute;
     top: 63px;
     left: -50px;
 }
 
+.welcome-inner {
+    display: flex;
+}
+
 .welcome-card {
     width: 430px;
-    margin-top: -270px;
-    margin-left: 40px;
+    margin-top: -292px;
+    border: 1px solid #dbdada;
+    padding: 35px 30px 25px;
+    background-color: #fff;
+    text-align: center;
 }
 
 .welcome-card-text {
@@ -244,14 +304,15 @@ header .wrap {
     font-size: 30px;
 }
 
-.welcome-form .control {
+.control {
     width: 100%;
     border: 1px solid #bebebe;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: 300;
     font-size: 19px;
     padding: 18px 15px;
     margin-top: 15px;
+   
 }
 
 .welcome-form .control:first-child {
@@ -266,8 +327,9 @@ header .wrap {
     border: 2px solid #90d23d;
 }
 
-.welcome-form .control:focus {
+.control:focus {
     border-color: #82b541;
+    border-width: 2px;
 }
 
 .stuff-list {
@@ -300,6 +362,7 @@ table {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 40px;
+    border-collapse: collapse;
 }
 
 table .first {
@@ -331,6 +394,10 @@ table .first td:nth-child(3) {
     margin: auto;
 }
 
+/* ===== Welcome styles end ===== */
+
+
+/* ===== Elites styles ===== */
 .elites {
     padding-top: 120px;
     padding-bottom: 110px;
@@ -347,7 +414,7 @@ table .first td:nth-child(3) {
 }
 
 .elites-text {
-    width: 55%;
+    width: 66%;
     margin: auto 0 60px auto;
 
 }
@@ -360,7 +427,9 @@ table .first td:nth-child(3) {
     box-shadow: 3px 8px 5px 1px rgba(0, 0, 0, .75);
     z-index: 10;
 }
+/* ===== Elites styles end ===== */
 
+/* ===== Speakers styles ===== */
 .speakers {
     padding: 160px 0;
 }
@@ -369,21 +438,10 @@ table .first td:nth-child(3) {
     transform: skewY(4deg);
 }
 
-/* .speakers .speakers-list {
-  margin-top: 70px;
+.speakers-intro {
+    width: 60%;
+    margin-bottom: 45px;
 }
-
-.speakers .speakers-list .row {
-    margin-top: 40px;
-} */
-
-/* .speakers-list-item {
-    box-shadow: 0 0 4px rgba(0, 0, 0, .75);
-} */
-
-/* .speakers .speakers-list .row:nth-child(2) .col:nth-child(2) img {
-    width: 93%;
-} */
 
 .speakers-list {
     display: flex;
@@ -399,13 +457,19 @@ table .first td:nth-child(3) {
 .speakers-list-item img {
     width: 100%;
     display: block;
+    height: auto;
 }
 
-.speakers .speakers-list .covered {
-    background: url('/img/speaker-2.png') no-repeat;
-    background-size: cover;
-    padding: 30px 30px;
+.covered {
+    position: relative;
 }
+
+.covered-content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
 
 .speakers .speakers-list-item .covered .name {
     font-size: 45px;
@@ -436,7 +500,9 @@ table .first td:nth-child(3) {
 .social-networks .social-networks-item + .social-networks-item {
     margin-left: 5px;
 }
+/* ===== Speakers styles end ===== */
 
+/* ===== Sponsors styles ===== */
 .our-sponsors {
     padding: 100px 0 100px; 
   
@@ -466,13 +532,19 @@ table .first td:nth-child(3) {
     font-size: 22px;
     padding: 15px 40px;
 }
+/* ===== Header styles end ===== */
 
+/* ===== Past-events styles ===== */
 .past-events {
     padding: 175px 0 105px 0;
 }
 
 .past-events .container {
     transform: skewY(4deg);
+}
+
+.past-events-intro {
+    width: 60%;
 }
 
 .past-events-photo {
@@ -501,10 +573,33 @@ table .first td:nth-child(3) {
     background-color: #373737;
     font-size: 22px;
 }
+/* ===== Past-events styles end ===== */
 
+/* ===== Contacts styles ===== */
+.contacts {
+    padding: 100px 0 100px; 
+}
+
+.contacts-heading {
+    color: white;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.contacts-form {
+    width: 400px;
+    margin: auto;
+}
+
+.сontacts-btn {
+    margin-top: 25px;
+}
+/* ===== Contacts styles end ===== */
+
+/* ===== Footer styles ===== */
 .footer {
     padding: 55px 0 35px 0;
-    
+    background-color: #90d23d;
 }
 
 .footer-menu {
@@ -530,11 +625,11 @@ table .first td:nth-child(3) {
     text-align: center;
     margin-top: 40px;
 }
-
+/* ===== Footer styles end ===== */
 .arrow-up {
     position: fixed;
     bottom: 10%;
-    right: 6%;
+    right: 5%;
     font-size: 50px;
     z-index: 11;
 }
@@ -543,28 +638,278 @@ table .first td:nth-child(3) {
     color: #242424;
 }
    
-.countdown {
-    font-family: 'Roboto Slab', sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 130px;
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.countdown-number {
-    padding: 10px;
-    display: inline-block;
-}
-
-.countdown-time {
-    padding: 15px;
-    display: inline-block;
-}
-
-.countdown-text {
+.burger-item {
     display: block;
-    padding-top: 5px;
-    font-size: 16px;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative
+}
+
+.burger-item::before,
+.burger-item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.burger-item::before {
+    top: -8px;
+}
+
+.burger-item::after {
+    bottom: -8px;
+}
+
+@media (max-width: 1199px) {
+    .arrow-up {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .header .nav {
+        display: none;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .header-list {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: -126px;
+        background-color:rgba(0, 0, 0, .25);
+        width: 100%;
+        text-align: right;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .list-item {
+        padding: 5px;
+    }
+
+    .list-item:hover {
+        color: #90d23d;
+    }
+
+    .list-item:hover:after {
+        width: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .clock {
+        max-width: 870px;
+    }
+
+    .welcome-card {
+        margin-left: 0;
+        width: 380px;
+    }
+
+    .welcome-form .submit-btn {
+        font-size: 18px;
+    }
+
+    .countdown {
+        font-size: 100px;
+    }
+
+    .speakers .speakers-list-item .covered .name {
+        font-size: 30px;
+        line-height: 1
+    }
+
+    .speakers .speakers-list-item .covered .more {
+        font-size: 14px;
+    }
+
+    .covered-content {
+        top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .countdown-time {
+        font-size: 75px;
+        line-height: 1;
+    }
+
+    .social-networks-item {
+        margin-top: 20px;
+    }
+
+    .welcome-inner {
+        flex-direction: column;
+    }
     
+    .greating {
+        width: 100%;
+        text-align: center;
+    }
+
+    .welcome-card {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .elites-wrap {
+        text-align: center;
+    }
+
+    .elites-text {
+        width: 100%;
+    }
+
+    .elite-logo {
+        width: 30%;
+    }
+
+    .speakers-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .past-events-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .past-events-photo {
+        margin-top: 70px;
+    }
+
+    .clock {
+        height: 170px;
+    }
+
+    .guy-5 {
+        display: none;
+    }
+}
+
+@media (max-width: 586px) {
+
+    .countdown-time {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .stuff-list {
+        flex-direction: column;
+        margin-top: 105px;
+    }
+
+    .stuff-list li {
+        max-width: 100%;
+    }
+
+    .stuff-text {
+        font-size: 16px;
+    }
+
+    .stuff-list li + li {
+        margin-top: 20px;
+    }
+
+    table .first {
+        font-size: 25px;
+    }
+
+    table .second, .third, .fourth, .fifth {
+        font-size: 14px;
+    }
+
+    .covered-content {
+        top: 10px;
+        left: 10px;
+    }
+
+    .speakers .speakers-list-item .covered .name {
+        font-size: 16px;
+    }
+
+    .speakers .speakers-list-item .covered .more {
+        font-size: 12px;
+    }
+
+    .line {
+        margin: 4px 0;
+    }
+
+    .social-networks-item {
+        width: 17%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 411px) {
+    .guy-4 {
+        display: none; 
+    }
+
+    .countdown-time {
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .heading {
+        font-size: 2.6em;
+    }
+
+    table .first {
+        font-size: 20px;
+    }
+
+    table .second, .third, .fourth, .fifth {
+        font-size: 12px;
+    }
+
+    .elite-logo {
+        top: -153px;
+    }
+
+    .speakers-list-item {
+        padding: 10px; 
+    }
+
+    .speakers .speakers-list-item .covered .name {
+        font-size: 12px;
+    }
+
+    .speakers .speakers-list-item .covered .more {
+        font-size: 8px;
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    .social-networks-item {
+        width: 15%;
+        margin-top: 7px;
+    }
+
+    .contacts-form {
+        width: 100%;
+        margin: auto;
+    }
 }
