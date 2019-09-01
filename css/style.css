@@ -465,20 +465,21 @@ table .first td:nth-child(3) {
     position: relative;
 }
 
-/* .covered-content {
+.covered-content {
     position: absolute;
-    top: 50px;
-    left: 50px;
     opacity: 0;
     transition: opasity 2s linear;
     background: url('../img/speaker-2.png') no-repeat;
     background-size: cover;
-} */
+    width: 91%;
+    height: 91%;
+    padding: 30px;
+}
 
 .covered-content {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 16px;
+    left: 16px;
 }
 
 .covered-content:hover {
@@ -716,7 +717,7 @@ table .first td:nth-child(3) {
         position: absolute;
         right: 0;
         bottom: -126px;
-        background-color:rgba(0, 0, 0, .25);
+        background-color:rgba(0, 0, 0, .5);
         width: 100%;
         text-align: right;
         padding: 10px;
@@ -756,17 +757,31 @@ table .first td:nth-child(3) {
         font-size: 100px;
     }
 
-    .speakers .speakers-list-item .covered .name {
+    /* .speakers .speakers-list-item .covered .name {
         font-size: 30px;
         line-height: 1
     }
 
     .speakers .speakers-list-item .covered .more {
         font-size: 14px;
-    }
+    } */
+
 
     .covered-content {
-        top: 20px;
+        padding: 20px;
+    }
+
+    .covered-content .name {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .covered-content .more {
+        font-size: 16px;
+    }
+
+    .social-networks-item {
+        margin-top: 35px;
     }
 }
 
@@ -831,6 +846,35 @@ table .first td:nth-child(3) {
     .guy-5 {
         display: none;
     }
+
+    .covered-content {
+        padding: 15px;
+        width: 87%;
+        height: 87%
+    }
+
+    .covered-content .more {
+        font-size: 14px;
+    }
+
+    .social-networks-item {
+        width: 15%;
+    }
+}
+
+@media (max-width: 675px) {
+    .covered-content {
+        width: 85%;
+        height: 85%;
+    }
+
+    .covered-content .name {
+        font-size: 22px;
+    }
+
+    .covered-content .more {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 586px) {
@@ -871,19 +915,6 @@ table .first td:nth-child(3) {
         font-size: 14px;
     }
 
-    .covered-content {
-        top: 10px;
-        left: 10px;
-    }
-
-    .speakers .speakers-list-item .covered .name {
-        font-size: 16px;
-    }
-
-    .speakers .speakers-list-item .covered .more {
-        font-size: 12px;
-    }
-
     .line {
         margin: 4px 0;
     }
@@ -891,6 +922,19 @@ table .first td:nth-child(3) {
     .social-networks-item {
         width: 17%;
         margin-top: 10px;
+    }
+
+    .covered-content {
+        width: 83%;
+        height: 83%;
+    }
+
+    .covered-content .name {
+        font-size: 20px;
+    }
+
+    .covered-content .more {
+        font-size:  9px;
     }
 }
 
@@ -925,14 +969,6 @@ table .first td:nth-child(3) {
         padding: 10px; 
     }
 
-    .speakers .speakers-list-item .covered .name {
-        font-size: 12px;
-    }
-
-    .speakers .speakers-list-item .covered .more {
-        font-size: 8px;
-    }
-
     .line {
         height: 2px;
     }
@@ -954,6 +990,39 @@ table .first td:nth-child(3) {
     .sponsors .sponsors-item + .sponsors-item {
         margin-left: 85px;
         margin-top: 0;
+    }
+
+    .covered-content {
+        top: 11px;
+        left: 11px;
+        width: 86%;
+        height: 86%;
+        padding: 10px;
+    }
+
+    .covered-content .name {
+        font-size: 18px;
+    }
+
+    .covered-content .more {
+        font-size:  8px;
+    }    
+}
+
+@media (max-width: 411px) {
+    .covered-content .name {
+        font-size: 12px;
+    }
+
+    .covered-content .more {
+        font-size:  6px;
+    }  
+
+    .covered-content {
+        width: 83%;
+        height: 83%;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -981,5 +1050,28 @@ table .first td:nth-child(3) {
 
     .footer-info {
         font-size: 14px;
+    }
+
+    .covered-content {
+        padding: 5px;
+        
+    }
+
+    .covered-content .name {
+        font-size: 8px;
+    }
+
+    .covered-content .more {
+        font-size:  6px;
+        display: block;
+    }  
+
+    .line {
+        display: none;
+    }
+
+    .covered-content {
+        width: 77%;
+        height: 77%;
     }
 }
