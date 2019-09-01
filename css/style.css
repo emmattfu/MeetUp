@@ -465,6 +465,10 @@ table .first td:nth-child(3) {
     position: relative;
 }
 
+.hov {
+    opacity: 100;
+}
+
 .covered-content {
     position: absolute;
     opacity: 0;
