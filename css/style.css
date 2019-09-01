@@ -483,7 +483,7 @@ table .first td:nth-child(3) {
 }
 
 .covered-content:hover,
-.covered-content:focus {
+.covered-content:active {
     opacity: 100;
 }
 
