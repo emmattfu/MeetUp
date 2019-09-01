@@ -4,6 +4,7 @@ let nav = document.getElementById('nav');
 let header = document.getElementById('header');
 let welcome = document.getElementById('welcome');
 let scrollPos = window.scrollY;
+let speakers = document.querySelector('.speakers-list')
 
 burger.addEventListener('click', function(){
     nav.classList.toggle('show');
@@ -16,6 +17,11 @@ window.addEventListener('scroll', function(){
     } else {
         header.classList.remove('fixed');
     }
+})
+
+speakers.addEventListener('click', function(e){
+    e.preventDefault();
+    e.target.parentNode.classList.toggle('hov');
 })
 
 
