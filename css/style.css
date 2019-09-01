@@ -482,7 +482,8 @@ table .first td:nth-child(3) {
     left: 16px;
 }
 
-.covered-content:hover {
+.covered-content:hover,
+.covered-content:focus {
     opacity: 100;
 }
 
@@ -756,16 +757,6 @@ table .first td:nth-child(3) {
     .countdown {
         font-size: 100px;
     }
-
-    /* .speakers .speakers-list-item .covered .name {
-        font-size: 30px;
-        line-height: 1
-    }
-
-    .speakers .speakers-list-item .covered .more {
-        font-size: 14px;
-    } */
-
 
     .covered-content {
         padding: 20px;
